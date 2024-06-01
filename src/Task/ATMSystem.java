@@ -9,7 +9,8 @@ public class ATMSystem {
 
     public ATMSystem() {
         users = new HashMap<>();
-        // Add some users for testing purposes
+        
+        
         users.put("user1", new User("user1", "1234", new Account(1000)));
         users.put("user2", new User("user2", "2345", new Account(2000)));
     }

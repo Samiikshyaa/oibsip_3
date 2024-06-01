@@ -21,7 +21,14 @@ public class ATM {
 		System.out.println("Enter the User Pin: ");
 		String pin = sc.next();
 		
-	}
+        User user = atmsys.validateUser(uid, pin);
+        if (user != null) {
+            showMenu(user);
+        } else {
+            System.out.println("Invalid user ID or PIN.");
+        }
+   }
+		
 	
 	private void showMenu(User user) {
 		Scanner sc = new Scanner(System.in);
@@ -56,7 +63,7 @@ public class ATM {
                     String recipientId = sc.next();
                     System.out.print("Enter amount to transfer: ");
                     double transferAmount = sc.nextDouble();
-                    user.transfer(recipientId, transferAmount, atmSystem);
+                    user.transfer(recipientId, transferAmount, atmsys);
                     break;
                 case 5:
                     System.out.println("Thank you for using the ATM. Goodbye!");
