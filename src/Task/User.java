@@ -20,33 +20,6 @@ public class User {
 		return id;
 	}
 
-	public void setId(String id) {
-		this.id = id;
-	}
-
-	public String getPin() {
-		return pin;
-	}
-
-	public void setPin(String pin) {
-		this.pin = pin;
-	}
-
-	public Account getAccount() {
-		return account;
-	}
-
-	public void setAccount(Account account) {
-		this.account = account;
-	}
-
-	public List<Transaction> getTransactionHistory() {
-		return transactionHistory;
-	}
-
-	public void setTransactionHistory(List<Transaction> transactionHistory) {
-		this.transactionHistory = transactionHistory;
-	}
 	
 	public boolean validatePin(String pin) {
         return this.pin.equals(pin);
@@ -93,4 +66,4 @@ public class User {
         }
     }
 }
-}
+
